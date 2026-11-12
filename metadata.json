@@ -1,0 +1,6 @@
+{
+  "name": "ZeroLabz Post-Quantum Zero-Trust Neural Threat Engine",
+  "description": "ZeroLabz post-quantum zero-trust neural network platform for real-time threat detection, automated incident response, NIST 2030 compliance auditing, and 3D neural cyber topology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
