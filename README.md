@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# @zerolabz/neural-threat-engine
 
-# Run and deploy your AI Studio app
+**Post-Quantum Zero-Trust Architecture (PQ-ZTA) Neural Threat Engine** with interactive 3D WebGL telemetry, real-time cryptographic audit ledgers, predictive threat analytics, and NIST FIPS 203/204 (**ML-KEM-1024** / **ML-DSA-87**) protection.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/93a6f94e-3b81-46a8-86ed-bc1918e1298f
+## Core Capabilities
 
-## Run Locally
+* **Interactive 3D Zero-Trust Topology (`ZeroTrust3DScene`):** Real-time Three.js / WebGL telemetry visualizing post-quantum node meshes, ingress/egress enclaves, and active threat vectors.
+* **Post-Quantum Cryptographic Enforcement:** Engineered around **ML-KEM-1024** key encapsulation and **ML-DSA-87** digital signature verification across telemetry and control planes.
+* **AI Forensics & Threat Simulation (`AiForensicsModal` & `ThreatSimulatorModal`):** Automated anomaly inspection, adversarial packet injection testing, and predictive analytics (`PredictiveAnalyticsView`).
+* **Immutable Audit Ledger (`AuditLedgerView`):** Continuous verification of session handshakes, latency sparklines, and node performance telemetry.
 
-**Prerequisites:**  Node.js
+---
 
+## Installation & Quick Start
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install @zerolabz/neural-threat-engine
