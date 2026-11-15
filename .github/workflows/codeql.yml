@@ -4,7 +4,7 @@
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
 #
-# ******** HOW TO SUCCESSFUL CODEQL TIME ********
+# ********** HOW TO SUCCESSFUL CODEQL TIME **********
 # 1. Use the CodeQL CLI to run queries locally.
 # 2. Add queries to this workflow file.
 # 3. View results in the GitHub Security tab.
@@ -42,11 +42,11 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: javascript-typescript
-          # CodeQL supports the following values for this field: 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift'
-          # Use 'java-kotlin' to analyze code written in Java, Kotlin or both
-          # Use 'javascript-typescript' to analyze code written in JavaScript, TypeScript or both
-          # To learn more about CodeQL language support please see https://ali.build/codeql-docs/language-support
+          - language: javascript-typescript
+            # CodeQL supports the following values for this field: 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift'
+            # Use 'java-kotlin' to analyze code written in Java, Kotlin or both
+            # Use 'javascript-typescript' to analyze code written in JavaScript, TypeScript or both
+            # To learn more about CodeQL language support please see https://ali.build/codeql-docs/language-support
 
     steps:
     - name: Checkout repository
@@ -54,7 +54,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
+      uses: github/codeql-action/init@v4
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here, for example:
@@ -64,7 +64,7 @@ jobs:
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+      uses: github/codeql-action/autobuild@v4
 
     # 🛠️ Command-line render rules / build step for compiled languages can go here.
     #
@@ -74,4 +74,4 @@ jobs:
     #     make release
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
+      uses: github/codeql-action/analyze@v4
