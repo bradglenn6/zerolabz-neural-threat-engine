@@ -1,5 +1,7 @@
 # @zerolabz/neural-threat-engine
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24238065.svg)](https://doi.org/10.5281/zenodo.24238065)
+
 **Post-Quantum Zero-Trust Architecture (PQ-ZTA) Neural Threat Engine** with interactive 3D WebGL telemetry, real-time cryptographic audit ledgers, predictive threat analytics, and NIST FIPS 203/204 (**ML-KEM-1024** / **ML-DSA-87**) protection.
 
 ---
@@ -17,3 +19,4 @@
 
 ```bash
 npm install @zerolabz/neural-threat-engine
+```
