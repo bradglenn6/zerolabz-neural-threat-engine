@@ -4,11 +4,10 @@
 # You may wish to alter this file to override the set of languages analyzed,
 # or to provide custom queries or build logic.
 #
-# ********** NOTE **********
-# We have attempted to detect the languages in your repository. Please check
-# the `language` matrix defined below to confirm you have the correct set of
-# supported CodeQL languages.
-#
+# ******** HOW TO SUCCESSFUL CODEQL TIME ********
+# 1. Use the CodeQL CLI to run queries locally.
+# 2. Add queries to this workflow file.
+# 3. View results in the GitHub Security tab.
 name: "CodeQL Advanced"
 
 on:
@@ -17,7 +16,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '17 1 * * 1'
+    - cron: '0 0 * * 0'
   workflow_dispatch:
 
 jobs:
@@ -55,7 +54,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: actions/codeql-action/init@v3
+      uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here, for example:
@@ -65,16 +64,14 @@ jobs:
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
-      uses: actions/codeql-action/autobuild@v3
+      uses: github/codeql-action/autobuild@v3
 
     # 🛠️ Command-line render rules / build step for compiled languages can go here.
-    # -----------------------------------------------------------------------------
+    #
     # - run: |
     #     echo "Run build steps here"
     #     make bootstrap
     #     make release
 
     - name: Perform CodeQL Analysis
-      uses: actions/codeql-action/analyze@v3
-      with:
-        category: "/language:${{matrix.language}}"
+      uses: github/codeql-action/analyze@v3
